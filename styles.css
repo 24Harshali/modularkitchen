@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ================= THEME COLORS ================= */
+:root {
+  --primary: #c79a2b;
+  --primary-dark: #a87e20;
+  --text-dark: #333;
+  --bg-light: #f9f9f9;
+}
+
+/* ================= BODY ================= */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: var(--text-dark);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LEFT SIDE */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LOGO IMAGE */
+.logo-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* LOGO TEXT */
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* RIGHT SIDE */
+.nav-right {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+/* LINKS */
+.navbar a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+
+/* ================= BUTTON ================= */
+.btn {
+  background: linear-gradient(135deg, var(--primary), #e6b94d);
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  transform: scale(1.05);
+}
+
+/* ================= HERO ================= */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80');
+  height: 90vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* ================= SECTION ================= */
+.section {
+  padding: 70px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* ================= CARD ================= */
+.card {
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  transition: 0.3s;
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* ================= IMAGES ================= */
+.showcase img,
+.section img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* square images */
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.showcase img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  background: var(--bg-light);
+  padding: 60px;
+  text-align: center;
+}
+
+.form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* ================= POPUP ================= */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-box {
+  position: relative;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  font-size: 20px;
+  background: none;
+  cursor: pointer;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================= SMOOTH SCROLL ================= */
+html {
+  scroll-behavior: smooth;
+}
